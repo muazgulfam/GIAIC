@@ -35,9 +35,11 @@ for(let i = 0; i < peopleToInvite.length; i++){
     console.log(peopleToInvite[i] + " You are invited at the dinner tonight");
 }
 
-peopleToInvite.pop();
+/*peopleToInvite.pop();
 peopleToInvite.pop();
 console.log("Now the elements in the guest list are:")
 for(let i = 0; i < peopleToInvite.length; i++){
     console.log(peopleToInvite[i] + " You are invited at the dinner tonight");
-}
+}*/
+
+console.log("I would be inviting " + peopleToInvite.length + " guest at the dinner")

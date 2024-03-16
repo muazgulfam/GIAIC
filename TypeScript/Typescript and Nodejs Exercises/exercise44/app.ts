@@ -5,7 +5,9 @@ function createSandwich(...arr: string[]){
     }
 }
 
-createSandwich("Chicken", "Salad", "Ketchup");
-createSandwich("Beef", "Lettuce");
-createSandwich("Chicken", "Cheese", "Tomato");
-
+let sandwich1 = createSandwich("Chicken", "Salad", "Ketchup", "Mayonnaise");
+console.log(sandwich1);
+let sandwich2 = createSandwich("Beef", "Lettuce");
+console.log(sandwich2);
+let sandwich3 = createSandwich("Chicken", "Cheese", "Tomato");
+console.log(sandwich3);

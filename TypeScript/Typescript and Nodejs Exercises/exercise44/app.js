@@ -8,4 +8,9 @@ function createSandwich() {
         console.log(arr[i]);
     }
 }
-createSandwich("Chicken", "Salad", "Ketchup");
+var sandwich1 = createSandwich("Chicken", "Salad", "Ketchup", "Mayonnaise");
+console.log(sandwich1);
+var sandwich2 = createSandwich("Beef", "Lettuce");
+console.log(sandwich2);
+var sandwich3 = createSandwich("Chicken", "Cheese", "Tomato");
+console.log(sandwich3);

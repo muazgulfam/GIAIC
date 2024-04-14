@@ -20,7 +20,7 @@ let result = await inquirer.prompt([
     }
 ]);
 
-if(result.operator == "Additon"){
+if(result.operator == "+"){
     console.log(result.firstNumber + result.secondNumber)
 }
 else if(result.operator == "-"){

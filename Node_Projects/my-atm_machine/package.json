@@ -1,0 +1,12 @@
+{
+  "name": "my-atm_machine",
+  "version": "1.0.0",
+  "description": "Programmed a simple ATM machine ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MUAZ BIN GULFAM",
+  "license": "ISC"
+}

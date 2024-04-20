@@ -1,10 +1,9 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 let userData = {
     pin: 1234,
     balance: 100000
 };
-/*console.log(userData.pin);
-console.log(userData);*/
 function showBalance() {
     console.log("Your current balance is " + userData.balance);
 }
@@ -14,8 +13,9 @@ const result = await inquirer.prompt([
         type: "password",
         mask: '*',
         message: "Please enter your Pin",
-        validate: (ans) => {
+        validate: function (ans) {
             if (ans == userData.pin) {
+                //console.log("\nCorect Pin code!")
                 return true;
             }
             else {
@@ -27,7 +27,10 @@ const result = await inquirer.prompt([
         name: "atmOperation",
         type: "list",
         message: "Which operation do you want to perform",
-        choices: ["Check current Balance", "Withdraw"]
+        choices: [
+            "Check current Balance",
+            "Withdraw"
+        ]
     }
 ]);
 if (result.atmOperation === "Check current Balance") {
@@ -43,12 +46,12 @@ else if (result.atmOperation === "Withdraw") {
                 return true;
             }
             else {
-                return "Invalid amount selected";
+                return "Invalid amount selected\nInsufficient Balance!";
             }
         }
     });
     console.log("an amount " + withDrawAmount.amount + " have been withdrawed form you account");
-    userData.balance = userData.balance - withDrawAmount.amount;
+    userData.balance -= withDrawAmount.amount;
     showBalance();
 }
 else {

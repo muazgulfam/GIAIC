@@ -1,8 +1,7 @@
 import inquirer from "inquirer";
 let myTodos = [];
-
-let condition: boolean = true;
-while(condition){
+let condition = true;
+while (condition) {
     let result = await inquirer.prompt([
         {
             message: "Write anything you want to remember",
